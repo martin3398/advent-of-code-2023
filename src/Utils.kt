@@ -1,3 +1,4 @@
+import java.io.File
 import java.math.BigInteger
 import java.security.MessageDigest
 import kotlin.io.path.Path
@@ -7,6 +8,13 @@ import kotlin.io.path.readLines
  * Reads lines from the given input txt file.
  */
 fun readInput(name: String) = Path("src/$name.txt").readLines()
+
+fun readInput(day: Int, test: Boolean = false, secondPart: Boolean = false): List<String> {
+    val dayStr = day.toString().padStart(2, '0')
+    val testSuffix = if (test) "_test" else ""
+    val secondPartSuffix = if (secondPart) "_2" else ""
+    return File("src/day$dayStr", "Day$dayStr$testSuffix$secondPartSuffix.txt").readLines()
+}
 
 /**
  * Converts string to md5 hash.
