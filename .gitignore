@@ -1,4 +1,9 @@
+# kotlin
 .gradle
-.idea
 build
-src/**/*.txt
+
+# test files
+src/**/Day??.txt
+
+# idea
+.idea
