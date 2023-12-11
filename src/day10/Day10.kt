@@ -4,22 +4,12 @@ import println
 import readInput
 
 enum class PIPE(val neighbors: List<Pair<Int, Int>>) {
-    NORTH_SOUTH(listOf(Pair(-1, 0), Pair(1, 0))), EAST_WEST(listOf(Pair(0, -1), Pair(0, 1))), NORTH_EAST(
-        listOf(
-            Pair(
-                -1,
-                0
-            ), Pair(0, 1)
-        )
-    ),
-    NORTH_WEST(listOf(Pair(-1, 0), Pair(0, -1))), SOUTH_EAST(listOf(Pair(1, 0), Pair(0, 1))), SOUTH_WEST(
-        listOf(
-            Pair(
-                1,
-                0
-            ), Pair(0, -1)
-        )
-    ),
+    NORTH_SOUTH(listOf(Pair(-1, 0), Pair(1, 0))),
+    EAST_WEST(listOf(Pair(0, -1), Pair(0, 1))),
+    NORTH_EAST(listOf(Pair(-1, 0), Pair(0, 1))),
+    NORTH_WEST(listOf(Pair(-1, 0), Pair(0, -1))),
+    SOUTH_EAST(listOf(Pair(1, 0), Pair(0, 1))),
+    SOUTH_WEST(listOf(Pair(1, 0), Pair(0, -1))),
     NONE(listOf());
 }
 
