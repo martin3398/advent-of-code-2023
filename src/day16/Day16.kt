@@ -1,11 +1,8 @@
 package day16
 
+import Direction
 import println
 import readInput
-
-enum class Direction {
-    UP, DOWN, LEFT, RIGHT
-}
 
 fun main() {
     fun processInput(input: List<String>): Array<String> = input.toTypedArray()
